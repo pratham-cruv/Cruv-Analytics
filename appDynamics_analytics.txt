@@ -1,0 +1,57 @@
+Transaction Analytics:
+1. Transaction response time: The time it takes for an application transaction to complete.
+2. Transaction throughput: The number of transactions that are processed per second.
+3. Error rate: The percentage of transactions that fail.
+4. Transaction duration: The total time it takes for a transaction to complete, including both the time spent processing the transaction and the time spent waiting for resources.
+5. Transaction failure rate: The percentage of transactions that fail to complete successfully.
+6. Transaction success rate: The percentage of transactions that complete successfully.
+7. Transaction abandonment rate: The percentage of transactions that are abandoned by the end user before they are completed.
+8. Transaction SLA violation rate: The percentage of transactions that violate the service level agreement (SLA).
+
+Log Analytics:
+1. HTTP status code: The status code of the HTTP response.
+2. Request method: The HTTP request method, such as GET or POST.
+3. URI: The Uniform Resource Identifier (URI) of the request.
+4. Response time: The time it takes for the server to respond to the request.
+5. Error message: The error message, if any.
+6. Latency: The time it takes for data to travel between the client and the server.
+7. Throughput: The number of requests that are processed per second.
+8. Bytes transferred: The number of bytes that are transferred between the client and the server.
+
+Browser Analytics:
+1. Page load time: The time it takes for a page to load in the browser.
+2. Bounce rate: The percentage of visitors who leave the application after viewing only one page.
+3. Session duration: The length of time that a user spends interacting with the application.
+4. Unique visitors: The number of different users who visit the application.
+5. Visits: The total number of times that users visit the application.
+6. Page views: The total number of pages that are viewed by users.
+7. Average time on page: The average amount of time that users spend on a page.
+8. Active users: The number of users who are currently interacting with the application.
+
+Mobile Analytics:
+1. Device type: The type of device that is being used, such as a smartphone or tablet.
+2. Operating system: The operating system that is running on the device.
+3. Browser: The browser that is being used to access the application.
+4. Screen resolution: The resolution of the device's screen.
+5. Network type: The type of network that the device is connected to, such as Wi-Fi or cellular data.
+6. Location: The location of the device, if available.
+7. App usage: The time that the user spends using the application, the number of pages that are viewed, and the number of transactions that are processed.
+
+Browser Synthetic Analytics:
+1. Transaction response time: The time it takes for a synthetic transaction to complete.
+2. Transaction throughput: The number of synthetic transactions that are processed per second.
+3. Error rate: The percentage of synthetic transactions that fail.
+4. Transaction duration: The total time it takes for a synthetic transaction to complete, including both the time spent processing the transaction and the time spent waiting for resources.
+5. Transaction failure rate: The percentage of synthetic transactions that fail to complete successfully.
+6. Transaction success rate: The percentage of synthetic transactions that complete successfully.
+7. Transaction abandonment rate: The percentage of synthetic transactions that are abandoned by the end user before they are completed.
+8. Transaction SLA violation rate: The percentage of synthetic transactions that violate the service level agreement (SLA).
+
+Connected Devices Analytics:
+1. Device type: The type of device that is being used, such as a smart TV or IoT device.
+2. Operating system: The operating system that is running on the device.
+3. Browser: The browser that is being used to access the application.
+4. Screen resolution: The resolution of the device's screen.
+5. Network type: The type of network that the device is connected to, such as Wi-Fi or cellular data.
+6. Location: The location of the device, if available.
+7. App usage: The time that the user spends using the application, the number of pages that are viewed, and the number of transactions that are processed.

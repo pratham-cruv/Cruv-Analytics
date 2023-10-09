@@ -1,0 +1,212 @@
+class Amplitude {
+  external Amplitude(String instanceName);
+  external static Amplitude getInstance(String instanceName);
+  external void init(String api, String? userId);
+  external void setOptOut(bool optOut);
+  external void setUserId(String? userId, bool startNewSession);
+  external void setDeviceId(String deviceId);
+  external void setServerUrl(String serverUrl);
+  external void setEventUploadThreshold(int);
+  external void regenerateDeviceId();
+  external void setUseDynamicConfig(bool useDynamicConfig);
+  external void logEvent(String eventType, Object? eventProperties,
+      Function? optCallback, Function? optErrorCallback, bool? outOfSession);
+  external void logRevenue(
+      double price, int quantity, String? productIdentifier);
+  external void setGroup(String groupType, dynamic groupName);
+  external void setUserProperties(Object userProperties);
+  external void clearUserProperties();
+  external void sendEvents();
+  external void setLibrary(String? libraryName, String? libraryVersion);
+  external String getUserId();
+  external String getDeviceId();
+  external void getSessionId();
+  external void setMinTimeBetweenSessionsMillis(int timeInMillis);
+  external void setServerZone(String serverZone, bool updateServerUrl);
+  external void identify(Identify identify);
+  external void groupIdentify(
+      String groupType,
+      String groupName,
+      Identify groupIdentify,
+      Function? opt_callback,
+      Function? opt_error_callback,
+      bool? outOfSession);
+  external bool setOffline(bool enabled);
+  external Options options;
+}
+
+class Identify {
+  external Identify();
+  external void add(String key, dynamic value);
+  external void append(String key, dynamic value);
+  external void prepend(String key, dynamic value);
+  external void set(String key, dynamic value);
+  external void setOnce(String key, dynamic value);
+  external void unset(String key);
+  external void preInsert(String key, dynamic value);
+  external void postInsert(String key, dynamic value);
+  external void remove(String key, dynamic value);
+  external void clearAll();
+}
+
+class Options {
+  external set eventUploadPeriodMillis(int value);
+}
+
+
+	Amplitude.getInstance().clearUserProperties()
+        Amplitude.getInstance().disableCoppaControl()
+        Amplitude.getInstance().enableCoppaControl()
+        Amplitude.getInstance().getDeviceId()
+        Amplitude.getInstance().getSessionId()
+        Amplitude.getInstance().getUserId()
+        Amplitude.getInstance().groupIdentify(
+  	String groupType,
+  	String groupName,
+  	Identify groupIdentify, {
+  	bool outOfSession = false,
+	}),
+        Amplitude.getInstance().identify(Identify identify)
+        Amplitude.getInstance().init(apiKey)
+        Amplitude.getInstance().logEvent(eventType)
+        Amplitude.getInstance().logRevenue(productIdentifier, quantity, price)
+        Amplitude.getInstance().logRevenueAmount(amount)
+        Amplitude.getInstance().regenerateDeviceId()
+        Amplitude.getInstance().setDeviceId(deviceId)
+        Amplitude.getInstance().setEventUploadPeriodMillis(value)
+        Amplitude.getInstance().setEventUploadThreshold(value)
+        Amplitude.getInstance().setGroup(groupType, groupName)
+        Amplitude.getInstance().setMinTimeBetweenSessionsMillis(timeInMillis)
+        Amplitude.getInstance().setOptOut(optOut)
+        Amplitude.getInstance().setOffline(enabled)
+        Amplitude.getInstance().setServerUrl(serverUrl)
+        Amplitude.getInstance().setServerZone(serverZone)
+        Amplitude.getInstance().setUseDynamicConfig(useDynamicConfig)
+        Amplitude.getInstance().setUserId(userId)
+        Amplitude.getInstance().setUserProperties(userProperties)
+        Amplitude.getInstance().toString()
+        Amplitude.getInstance().trackingSessionEvents(trackingSessionEvents)
+        Amplitude.getInstance().useAppSetIdForDeviceId()
+
+### Amplitude Class 
+
+1. **Static Method `Amplitude getInstance(String instanceName)`**
+   - **Description**: Returns an instance of the Amplitude class with the specified instance name.
+
+2. **Method `void init(String api, String? userId)`**
+   - **Description**: Initializes Amplitude with the provided API key and user ID (optional). This method sets up the Amplitude instance for tracking.
+
+3. **Method `void setOptOut(bool optOut)`**
+   - **Description**: Sets whether the user has opted out of tracking (`optOut` is `true` to opt out, `false` to opt in).
+
+4. **Method `void setUserId(String? userId, bool startNewSession)`**
+   - **Description**: Sets the user ID and optionally starts a new session.
+
+5. **Method `void setDeviceId(String deviceId)`**
+   - **Description**: Sets a custom device ID.
+
+6. **Method `void setServerUrl(String serverUrl)`**
+   - **Description**: Sets a custom server URL.
+
+7. **Method `void setEventUploadThreshold(int)`**
+   - **Description**: Sets the number of events required before they are uploaded to the server.
+
+8. **Method `void regenerateDeviceId()`**
+   - **Description**: Generates a new device ID for the current user.
+
+9. **Method `void setUseDynamicConfig(bool useDynamicConfig)`**
+   - **Description**: Enables or disables dynamic configurations.
+
+10. **Method `void logEvent(String eventType, Object? eventProperties, Function? optCallback, Function? optErrorCallback, bool? outOfSession)`**
+    - **Description**: Logs an event with the specified event type, event properties, and optional callbacks.
+
+11. **Method `void logRevenue(double price, int quantity, String? productIdentifier)`**
+    - **Description**: Logs revenue-related data such as price, quantity, and product identifier for a purchase event.
+
+12. **Method `void setGroup(String groupType, dynamic groupName)`**
+    - **Description**: Sets group information for the current user.
+
+13. **Method `void setUserProperties(Object userProperties)`**
+    - **Description**: Sets user properties with a JavaScript object.
+
+14. **Method `void clearUserProperties()`**
+    - **Description**: Clears all user properties.
+
+15. **Method `void sendEvents()`**
+    - **Description**: Sends queued events to the server.
+
+16. **Method `void setLibrary(String? libraryName, String? libraryVersion)`**
+    - **Description**: Sets the library name and version for tracking purposes.
+
+17. **Method `String getUserId()`**
+    - **Description**: Returns the user ID associated with the current user.
+
+18. **Method `String getDeviceId()`**
+    - **Description**: Returns the device ID associated with the current device.
+
+19. **Method `void getSessionId()`**
+    - **Description**: Returns the session ID.
+
+20. **Method `void setMinTimeBetweenSessionsMillis(int timeInMillis)`**
+    - **Description**: Sets the minimum time (in milliseconds) between sessions.
+
+21. **Method `void setServerZone(String serverZone, bool updateServerUrl)`**
+    - **Description**: Sets the server zone and updates the server URL accordingly.
+
+22. **Method `void identify(Identify identify)`**
+    - **Description**: Identifies a user with an `Identify` instance.
+
+23. **Method `void groupIdentify(String groupType, String groupName, Identify groupIdentify, Function? optCallback, Function? optErrorCallback, bool? outOfSession)`**
+    - **Description**: Identifies a group with an `Identify` instance.
+
+24. **Method `bool setOffline(bool enabled)`**
+    - **Description**: Sets the offline mode to enable or disable event tracking when the device is offline.
+
+25. **Property `Options options`**
+    - **Description**: An instance of the `Options` class used for setting event upload options.
+
+26. Amplitude.getInstance().disableCoppaControl(): This method is used to disable COPPA control in the Amplitude analytics tracking. When COPPA control is disabled, Amplitude may collect data from users who are under the age of 13 without obtaining parental consent, which is in accordance with COPPA regulations.
+
+27. Amplitude.getInstance().enableCoppaControl(): This method is used to enable COPPA control in the Amplitude analytics tracking. When COPPA control is enabled, Amplitude will take measures to ensure that data is not collected from users who are under the age of 13 without obtaining parental consent, as required by COPPA regulations.
+
+### Identify Class:
+
+1. **Constructor `Identify()`**
+   - **Description**: Initializes an instance of the `Identify` class.
+
+2. **Method `void add(String key, dynamic value)`**
+   - **Description**: Adds a value to an existing user property.
+
+3. **Method `void append(String key, dynamic value)`**
+   - **Description**: Appends a value to an existing user property if it's an array.
+
+4. **Method `void prepend(String key, dynamic value)`**
+   - **Description**: Prepends a value to an existing user property if it's an array.
+
+5. **Method `void set(String key, dynamic value)`**
+   - **Description**: Sets a user property to a specific value.
+
+6. **Method `void setOnce(String key, dynamic value)`**
+   - **Description**: Sets a user property only if it hasn't been set before.
+
+7. **Method `void unset(String key)`**
+   - **Description**: Unsets (removes) a user property.
+
+8. **Method `void preInsert(String key, dynamic value)`**
+   - **Description**: Inserts a value before an existing user property if it's an array.
+
+9. **Method `void postInsert(String key, dynamic value)`**
+   - **Description**: Inserts a value after an existing user property if it's an array.
+
+10. **Method `void remove(String key, dynamic value)`**
+    - **Description**: Removes a value from an existing user property if it's an array.
+
+11. **Method `void clearAll()`**
+    - **Description**: Clears all operations on user properties.
+
+
+
+### Options Class
+
+1. **Property `int eventUploadPeriodMillis`**
+   - **Description**: Sets the event upload period in milliseconds.

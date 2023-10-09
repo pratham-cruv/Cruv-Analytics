@@ -1,0 +1,64 @@
+1. Google Analytics for Firebase: ✔️
+
+Event Tracking
+User Segmentation
+Crash Reporting
+Real-time Performance Monitoring
+Integration with Google Services
+
+2. Adobe Analytics: ❌ 
+
+3. WebEngage: ✔️
+Versatile Platform: WebEngage is suitable for both web and app analytics, offering a unified solution.
+Personalization and Segmentation: It enables personalized user experiences and precise audience targeting through advanced segmentation.
+Automation Efficiency: WebEngage streamlines marketing campaigns, saving time and enhancing user engagement with automation features.
+
+
+4. Amplitude:  ✔️
+
+User Behavioral Analytics
+Event Segmentation
+User Cohorts
+Retention Analysis
+Funnel Analysis
+Predictive Analytics
+User Journeys
+Product Analytics
+Custom Dashboards
+Integrations
+
+5. AppDynamics Mobile:
+
+Real-time Performance Monitoring
+Application Performance Management
+Crash Reporting
+Performance Bottleneck Identification
+App Responsiveness and Stability Focus
+
+6. Mixpanel:
+
+Event Tracking
+User Segmentation
+Funnel Analysis
+Retention Analysis
+
+7. QlikView/Qlik Sense:    ❌- lacks e-commerce analytics 
+
+Data Discovery
+Data Visualization
+Data Modeling
+Collaboration
+Advanced Analytics
+Custom Dashboards
+Mobile Access
+Data Integration
+AI-Driven Insights
+Security
+Customization
+
+8. Flurry Analytics:  ❌- lacks app performance monitor & behaviour centered..
+
+User Behavior Tracking
+Marketing Optimization
+Limited Emphasis on Crash Reporting and Performance Monitoring
+

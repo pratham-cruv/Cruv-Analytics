@@ -1,0 +1,500 @@
+📌User analytics
+
+1. **user_id**
+   - Data Type: String
+   - Tracks: User ID
+
+2. **first_name**
+   - Data Type: String
+   - Tracks: First name
+
+3. **last_name**
+   - Data Type: String
+   - Tracks: Last name
+
+4. **birth_date**
+   - Data Type: Date
+   - Tracks: Birth date in YYYY-MM-DD format
+
+5. **gender**
+   - Data Type: String
+   - Tracks: Gender, which can be one of male/female/other
+
+6. **company**
+   - Data Type: String
+   - Tracks: Company
+
+7. **country**
+   - Data Type: String
+   - Tracks: Country
+
+8. **city**
+   - Data Type: String
+   - Tracks: City
+
+9. **region**
+   - Data Type: String
+   - Tracks: Region
+
+10. **locality**
+    - Data Type: String
+    - Tracks: Locality
+
+11. **postal_code**
+    - Data Type: String
+    - Tracks: Postal Code
+
+12. **email**
+    - Data Type: String
+    - Tracks: Email ID
+
+13. **phone**
+    - Data Type: String
+    - Tracks: Phone number, as shared by the user (e.g., +551155256325, +917850009678)
+
+14. **hashed_email**
+    - Data Type: String
+    - Tracks: Encrypted email address of a user (as encrypted and sent by you to your WebEngage account)
+
+15. **hashed_phone**
+    - Data Type: String
+    - Tracks: Encrypted phone number of a user (as encrypted and sent by you to your WebEngage account)
+
+16. **email_opt_in**
+    - Data Type: Boolean
+    - Tracks: Channel opt-in preference for email. All users that share their email address are automatically opted-in (value equals 'true'). If set to false by you, the user will be opted-out and will not receive promotional emails from you (transactional emails are sent to all users irrespective of their opt-in status).
+
+17. **sms_opt_in**
+    - Data Type: Boolean
+    - Tracks: Channel opt-in preference for SMS. All users that share their phone number are automatically opted-in (value equals 'true'). If set to false by you, the user will be opted-out and will not receive promotional SMS campaigns (transactional messages are sent to all users irrespective of their opt-in status).
+
+18. **push_opt_in**
+    - Data Type: Boolean
+    - Tracks: Channel opt-in preference for push notifications. All users that download your app and have push notifications enabled on their device are automatically opted-in (value equals 'true'). If set to false by you OR if a user disables push notifications (value is automatically set to false), they will be opted-out and will not receive promotional campaigns (transactional notifications are sent to all users irrespective of their opt-in status).
+
+19. **whatsapp_opt_in**
+    - Data Type: Boolean
+    - Tracks: Channel opt-in preference for WhatsApp. As per Facebook's guidelines, a user must explicitly opt-in to receive WhatsApp messages from your business. Thus, all users that share their phone number are opted-out of the channel (value equals 'false'). As soon as you obtain permission from the user, you will need to set the value to 'true' to start engaging them through WhatsApp.
+
+//Setting user attributes..
+
+1. String Attribute
+webengage.user.setAttribute("Category", "GOLD");
+
+2. Number Attribute
+webengage.user.setAttribute("Value Index", 5.06);
+
+3. Boolean Attribute
+webengage.user.setAttribute("Inactive", false);
+
+4. Date Attribute
+webengage.user.setAttribute("Registered On", new Date("2015-11-09T10:01:11.000Z"));
+
+5. Array Attribute
+webengage.user.setAttribute("Brand affinity", [
+    "Hugo Boss",
+    "Armani Exchange",
+    "GAS",
+    "Brooks Brothers"
+]);
+
+6. Object Attribute
+
+webengage.user.setAttribute("Address", {
+    "Flat"     : "Z-62",
+    "Building" : "Pennant Court",
+    "Locality" : "Penn Road",
+    "City"     : "Wolverhampton",
+    "State"    : "West Midlands",
+    "PIN"      : "WV30DT"
+});
+
+📌Events analytics
+**For All Apps & Websites:**
+
+1. **App Start**
+   - Source: Push, PPC, Organic, Direct, Email
+
+2. **Registered or Login**
+   - Channel: Facebook, Email, Twitter
+
+3. **Social Action**
+   - Platform: Twitter, Facebook
+   - Action: Share, Like
+   - Content: Article name
+
+4. **App Exit**
+   - Source: Push, PPC, Organic, Direct, Email
+
+5. **App Error**
+   - Type: Network error, No privilege, Bad HTTP response
+
+6. **App Crash**
+   - Type: Network error, No privilege, Bad HTTP response
+
+**E-commerce:**
+
+1. **Searched**
+   - Keyword: Apple TV, iPhone, Shoes
+   - Category: Apparel, Mobile Phones, Exercise & Fitness
+   - Filters: Color, Size, Price
+   - Result Count: 0, 150
+
+2. **Product Viewed**
+   - Product ID: 2301, 8a911mpp0
+   - Product: Canon EOS Rebel Camera, iPhone XR, OnePlus 7 Pro
+   - Category: Apparel, Mobile Phones, Exercise & Fitness
+   - Price: 18.99, 100, 150
+   - Currency: USD, GBP, INR
+   - In-Stock: True, False
+   - Seller ID: abc123, xyz123
+   - Seller Name: Thomson Retail, Janes Recording
+
+3. **Category Viewed**
+   - Category ID: 107f70, 90127hf897
+   - Category: Apparel, Mobile Phones, Exercise & Fitness
+   - Item Count: 0, 150
+
+4. **Added to Wishlist**
+   - Product ID: 1b87622
+   - Product: OnePlus 7 Pro
+   - Category: Mobile Phones
+   - Price: 52000
+
+5. **Product Rated or Reviewed**
+   - Product ID: 1b87622
+   - Product: Luciano Natazzi Men's Thermal Padded Hooded Flight Bomber Jacket
+   - Category: Men’s Clothing
+   - Brand: Luciano Natazzi
+   - Price: 55
+   - User Rating: 4.1
+   - User Review Summary: Nice jacket
+
+6. **Added to Cart**
+   - Product ID: 45001
+   - Product: Givenchy Pour Homme Cologne
+   - Category: Fragrance
+   - Price: 39.80
+   - Currency: USD
+   - Quantity: 2
+   - Seller ID: abc123
+   - Seller Name: Thomson Retail
+
+7. **Offer Availed**
+   - Offer: Deal of the day
+   - Description: 20% off kids furniture
+   - Discount: 2150
+   - Currency: INR
+   - Status: Successful, Failed
+
+8. **Checkout Started**
+   - Total Value: 749
+   - Currency: USD
+
+9. **Checkout Completed**
+   - Transaction ID: 917ab1apQ
+   - Total Value: 999
+   - Currency: INR, USD
+   - Payment Method: Credit Card, Debit Card, Wallet, Paypal, Internet Banking
+   - Seller ID
+   - Seller Name
+   - Shipping Country
+   - Shipping City
+   - Shipping Region
+   - Products: //have to check how this data is sent.
+
+**Travel (Hotel Booking):**
+1. **Searched**
+   - Keyword: Hilton London Tower Bridge
+   - Check-in
+   - Check-out
+   - Country: US
+   - City: New York City
+
+2. **Hotel Viewed**
+   - Hotel ID: 1234fd0, 8a9fn0011
+   - Hotel Name: The Cumberland, Ritz Carlton
+   - Category: Budget, Resort, Hotel
+   - Hotel Rating: 3, 4.5
+   - Country: US
+   - City: New York City
+   - Region: Manhattan
+
+3. **Hotel Reviewed**
+   - Hotel ID: 1234fd0, 8a9fn0011
+   - Hotel Name: The Cumberland, Ritz Carlton
+   - Category: Budget, Resort, Hotel
+   - Hotel Rating: 3, 4.5
+   - Country: US
+   - City: New York City
+   - Region: Manhattan
+
+4. **Added to Cart**
+   - Hotel ID: 45001
+   - Hotel Name: Kingsway Hall Hotel
+   - Category: Business
+   - Check-in Date
+   - Check-out Date
+   - Room Count: 1
+   - Guest Count: 2
+   - Currency: USD
+   - Quantity: 2
+
+5. **Offer Availed**
+   - Offer: 1 Free Night
+   - Description: 1 night stay free on 2 nights booking
+   - Discount: 99
+   - Currency: EUR
+   - Status: Successful, Failed
+
+6. **Checkout Started**
+   - Total Value: 181
+   - Currency: EUR
+
+7. **Checkout Completed**
+   - Transaction ID: 917ab1apQ
+   - Total Value: 999
+   - Currency: USD, EUR, INR
+   - Payment Method: Credit Card, Debit Card, Wallet, Paypal, Internet Banking
+   - Hotel ID: ia9fn0011
+   - Hotel Name: Ritz Carlton
+   - Category: Business
+   - Hotel Rating: 5
+   - Country: US
+   - City: New York City
+   - Region: Manhattan
+   - Check-in Date
+   - Check-out Date
+   - Room Count: 1
+   - Guest Count: 2
+
+**Travel (Flight Booking):**
+1. **Searched**
+   - Type: One-way, Round-trip, Multi-city
+   - Departure City: San Jose, US (SJC), Mumbai, India (BOM)
+   - Arrival City: Las Vegas, US (LAS), New Delhi, India (DEL)
+   - Departure Date
+   - Arrival Date
+   - Passenger Count: 1
+   - Class: Economy, Business
+
+2. **Selected**
+   - Type: Round-trip
+   - Departure City: San Jose, CA, US (SJC)
+   - Arrival City: Las Vegas, NV, US (LAS)
+   - Departure Date
+   - Arrival Date
+   - Passenger Count: 1
+   - Class: Economy
+   - Departure Airline: United
+   - Arrival Airline: JetBlue
+   - Total Value: 244
+   - Currency: USD
+
+3. **Added to Cart**
+   - Type: Round-trip
+   - Departure City: San Jose, CA, US (SJC)
+   - Arrival City: Las Vegas, NV, US (LAS)
+   - Departure Date
+   - Arrival Date
+   - Passenger Count: 1
+   - Class: Economy
+   - Departure Airline: United
+   - Arrival Airline: JetBlue
+   - Total Value: 244
+   - Currency: USD
+
+4
+
+. **Offer Availed**
+   - Offer: Free Meal
+   - Status: Successful, Failed
+
+5. **Checkout Started**
+   - Total Value: 181
+   - Currency: EUR
+
+6. **Checkout Completed**
+   - Transaction ID: 11a12lou
+   - Total Value: 305
+   - Currency: USD, EUR, INR
+   - Payment Method: Credit Card, Debit Card, Wallet, Paypal, Internet Banking
+   - Type: Round-trip
+   - Departure City: San Jose, CA, US (SJC)
+   - Arrival City: Las Vegas, NV, US (LAS)
+   - Departure Date
+   - Arrival Date
+   - Passenger Count: 1
+   - Class: Economy
+   - Departure Airline: United
+   - Arrival Airline: JetBlue
+   - Total Value: 244
+   - Currency: USD
+
+**Gaming:**
+
+1. **Level Started**
+   - Type: Single Player, Multi-Player
+   - Level: 2
+
+2. **Level Completed**
+   - Type: Single Player, Multi-Player
+   - Level: 3
+   - Completed: True, False
+   - Number Of Attempts: 5
+   - Total Score: 1602
+
+3. **Game Completed**
+   - Type: Single Player, Multi-Player
+   - Levels Completed: 1, 4
+   - Total Score: 17001
+   - Bonus Used: 700
+
+4. **Achievement Unlocked**
+   - Rank: 32
+
+5. **Bought Item**
+   - Item ID: 11
+   - Item Price: 9
+   - Item Currency: USD
+
+**Financial Services (Insurance):**
+
+1. **Premium Calculator Used**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Date of Birth
+   - Gender
+   - City
+
+2. **Applied for Quotation**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Quote ID: AX19934M
+
+3. **Checkout Started**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Quote ID: AX19934M
+
+4. **Checkout Completed**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Quote ID: AX19934M
+   - Installment Type: Annual, Semi-Annual, Quarterly, Monthly
+   - Insurance Policy Number: 1869846
+   - Renewal Date
+   - Payment Method: Cheque, Credit Card
+
+5. **Insurance Purchased**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Quote ID: AX19934M
+   - Installment Type: Annual, Semi-Annual, Quarterly, Monthly
+   - Insurance Policy Number: 1869846
+   - Renewal Date
+   - Payment Method: Cheque, Credit Card
+
+6. **Insurance Renewed**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Sum Assured: 500000
+   - Premium Amount: 10654
+   - Installment Type: Annual, Semi-Annual, Quarterly, Monthly
+   - Insurance Policy Number: 1869846
+   - Next Renewal Date
+   - Payment Method: Cheque, Credit Card
+
+7. **Claim Requested**
+   - Plan Type: Term Life Insurance, Health Insurance, Travel Insurance
+   - Plan Name: Bright Life, Retirement Cornerstone, Health Secure
+   - Insurance Policy Number: 1869846
+   - Next Renewal Date
+   - Claim ID: 13734
+   - Claim Amount: 16300
+   - Claim Request Date
+
+8. **Claim in Progress**
+   - Claim ID: 13734
+   - Claim Amount: 16300
+   - Claim Request Date
+   - Claim Status: Approved, Rejected
+   - Process Start Date
+   - Process End Date
+
+9. **Claim Settled**
+   - Claim ID: 13734
+   - Claim Amount: 16300
+   - Claim Request Date
+   - Claim Status: Approved, Rejected
+   - Settlement Amount: 15317
+   - Settlement Date
+   - Payment Method: Cheque, Transfer
+
+//Tracking events
+
+webengage.track(eventName, [eventData]);
+
+webengage.track("Added To Cart", {
+    /* Numbers */
+    "Product ID" : 1337,
+    "Price"      : 39.80,
+    "Quantity"   : 1,
+
+    /* Strings */
+    "Product"    : "Givenchy Pour Homme Cologne",
+    "Category"   : "Fragrance",
+    "Currency"   : "USD",
+
+    /* Boolean */
+    "Discounted" : true
+});
+
+webengage.track("Order Placed", {
+    "Amount"   : 2300,
+
+    /* Date */
+    "Delivery Date" : new Date("2017-01-09T00:00:00.000Z"),
+
+    /* Complex nested data */
+    "Products" : [
+        {
+            "SKU Code": "UHUH799",
+            "Product Name": "Armani Jeans"
+            "Price": 300.49,
+            "Details": {
+                "Size": "L"
+            }
+        },
+        {
+            "SKU Code": "FBHG746",
+            "Product Name": "Hugo Boss Jacket"
+            "Price": 507.99,
+            "Details": {
+                "Size": "L",
+            }
+        },
+    ],
+
+    /* Objects */
+    "Delivery Address": {
+        "City": "San Francisco",
+        "ZIP": "94121"
+    },
+
+    /* Arrays */
+    "Coupons Applied": [
+        "BOGO17"
+    ]
+});
+

@@ -1,0 +1,601 @@
+      firebase_analytics: latest_version
+
+      import 'package:firebase_analytics/firebase_analytics.dart';
+
+      FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+
+      analytics.logAdImpression()
+      analytics.logAddPaymentInfo()
+      analytics.logAddShippingInfo()
+      analytics.logAddToWishlist()
+      analytics.logAddToCart()
+      analytics.logAppOpen()
+      analytics.logBeginCheckout()
+      analytics.logCampaignDetails(source: source, medium: medium, campaign: campaign)
+      analytics.logEvent(name: name)
+      analytics.logGenerateLead()
+      analytics.logJoinGroup(groupId: groupId)
+      analytics.logLevelEnd(levelName: levelName)
+      analytics.logLevelStart(levelName: levelName)
+      analytics.logLevelUp(level: level)
+      analytics.logLogin()
+      analytics.logPurchase()
+      analytics.logPostScore(score: score)
+      analytics.logRefund()
+      analytics.logRemoveFromCart()
+      analytics.logScreenView()
+      analytics.logSearch(searchTerm: searchTerm)
+      analytics.logSelectContent(contentType: contentType, itemId: itemId)
+      analytics.logSelectPromotion()
+      analytics.logSelectItem()
+      analytics.logSetCheckoutOption(checkoutStep: checkoutStep, checkoutOption: checkoutOption)
+      analytics.logShare(contentType: contentType, itemId: itemId, method: method)
+      analytics.logSignUp(signUpMethod: signUpMethod)
+      analytics.logSpendVirtualCurrency(itemName: itemName, virtualCurrencyName: virtualCurrencyName, value: value)
+      analytics.logTutorialBegin()
+      analytics.logTutorialComplete()
+      analytics.logUnlockAchievement(id: id)
+      analytics.logViewCart()
+      analytics.logViewItem()
+      analytics.logViewPromotion()
+      analytics.logViewSearchResults(searchTerm: searchTerm)
+      analytics.resetAnalyticsData()
+      analytics.setAnalyticsCollectionEnabled(enabled)
+      analytics.setConsent()
+      analytics.setCurrentScreen(screenName: screenName)
+      analytics.setDefaultEventParameters(defaultParameters)
+      analytics.setSessionTimeoutDuration(timeout)
+      analytics.setUserId()
+      analytics.setUserProperty(name: name, value: value)
+
+
+// Functions with parameters.
+
+Future<void> logAdImpression({
+  String? adPlatform,
+  String? adSource,
+  String? adFormat,
+  String? adUnitName,
+  double? value,
+  String? currency,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logAddPaymentInfo({
+  String? coupon,
+  String? currency,
+  String? paymentType,
+  double? value,
+  List<AnalyticsEventItem>? items,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logAddShippingInfo({
+  String? coupon,
+  String? currency,
+  double? value,
+  String? shippingTier,
+  List<AnalyticsEventItem>? items,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logAddToWishlist({
+  List<AnalyticsEventItem>? items,
+  double? value,
+  String? currency,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logAddToCart({
+  List<AnalyticsEventItem>? items,
+  double? value,
+  String? currency,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logAppOpen({AnalyticsCallOptions? callOptions})
+
+Future<void> logBeginCheckout({
+  double? value,
+  String? currency,
+  List<AnalyticsEventItem>? items,
+  String? coupon,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logCampaignDetails({
+  required String source,
+  required String medium,
+  required String campaign,
+  String? term,
+  String? content,
+  String? aclid,
+  String? cp1,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logEvent({
+  required String name,
+  Map<String, Object?>? parameters,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> log
+ateLead({
+  String? currency,
+  double? value,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logJoinGroup({required String groupId, AnalyticsCallOptions? callOptions})
+
+Future<void> logLevelStart({required String levelName, AnalyticsCallOptions? callOptions})
+
+Future<void> logLevelEnd({
+  required String levelName,
+  int? success,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logLevelUp({
+  required int level,
+  String? character,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logLogin({String? loginMethod, AnalyticsCallOptions? callOptions})
+
+Future<void> logPurchase({
+  String? currency,
+  String? coupon,
+  double? value,
+  List<AnalyticsEventItem>? items,
+  double? tax,
+  double? shipping,
+  String? transactionId,
+  String? affiliation,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logPostScore({
+  required int score,
+  int? level,
+  String? character,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logRefund({
+  String? currency,
+  String? coupon,
+  double? value,
+  double? tax,
+  double? shipping,
+  String? transactionId,
+  String? affiliation,
+  List<AnalyticsEventItem>? items,
+})
+
+Future<void> logRemoveFromCart({
+  String? currency,
+  double? value,
+  List<AnalyticsEventItem>? items,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logScreenView({
+  String? screenClass,
+  String? screenName,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logSearch({
+  required String searchTerm,
+  int? numberOfNights,
+  int? numberOfRooms,
+  int? numberOfPassengers,
+  String? origin,
+  String? destination,
+  String? startDate,
+  String? endDate,
+  String? travelClass,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logSelectContent({required String contentType, required String itemId})
+
+Future<void> logSelectPromotion({
+  String? creativeName,
+  String? creativeSlot,
+  List<AnalyticsEventItem>? items,
+  String? locationId,
+  String? promotionId,
+  String? promotionName,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logSelectItem({
+  String? itemListId,
+  String? itemListName,
+  List<AnalyticsEventItem>? items,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logSetCheckoutOption({required int checkoutStep, required String checkoutOption})
+
+Future<void> logShare({
+  required String contentType,
+  required String itemId,
+  required String method,
+})
+
+Future<void> logSignUp({required String signUpMethod})
+
+
+Future<void> logSpendVirtualCurrency({
+  required String itemName,
+  required String virtualCurrencyName,
+  required num value,
+})
+
+Future<void> logTutorialBegin()
+
+Future<void> logTutorialComplete()
+
+Future<void> logUnlockAchievement({required String id})
+
+Future<void> logViewCart({
+  String? currency,
+  double? value,
+  List<AnalyticsEventItem>? items,
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> logViewItem({
+  String? currency,
+  double? value,
+  List<AnalyticsEventItem>? items,
+})
+
+Future<void> logViewPromotion({
+  String? creativeName,
+  String? creativeSlot,
+  List<AnalyticsEventItem>? items,
+  String? locationId,
+  String? promotionId,
+  String? promotionName,
+})
+
+Future<void> logViewPromotion({
+  String? creativeName,
+  String? creativeSlot,
+  List<AnalyticsEventItem>? items,
+  String? locationId,
+  String? promotionId,
+  String? promotionName,
+})
+
+Future<void> logViewSearchResults({required String searchTerm})
+
+Future<void> resetAnalyticsData()
+
+Future<void> setAnalyticsCollectionEnabled(bool enabled)
+
+Future<void> setConsent({bool? adStorageConsentGranted, bool? analyticsStorageConsentGranted})
+
+Future<void> setCurrentScreen({
+  required String? screenName,
+  String screenClassOverride = 'Flutter',
+  AnalyticsCallOptions? callOptions,
+})
+
+Future<void> setDefaultEventParameters(Map<String, Object?>? defaultParameters)
+
+Future<void> setSessionTimeoutDuration(Duration timeout)
+
+Future<void> setUserId({String? id, AnalyticsCallOptions? callOptions})
+
+Future<void> setUserProperty({
+  required String name,
+  required String? value,
+  AnalyticsCallOptions? callOptions,
+})
+
+
+//All parameter description and its uses
+
+
+1. `adPlatform` (String): Represents the platform where the ad was displayed, such as "Google Ads" or "Facebook Ads."
+
+   Example: "Google Ads"
+
+2. `adSource` (String): Specifies the source of the ad, such as the ad provider or network.
+
+   Example: "AdMob"
+
+3. `adFormat` (String): Describes the format of the ad, such as "Banner," "Interstitial," or "Video."
+
+   Example: "Banner"
+
+4. `adUnitName` (String): Refers to the name of the ad unit where the ad was displayed.
+
+   Example: "Home Page Banner"
+
+5. `value` (double): Represents a numeric value associated with the event, like the price of a product.
+
+   Example: 19.99
+
+6. `currency` (String): Specifies the currency used for monetary values, such as "USD" or "EUR."
+
+   Example: "USD"
+
+7. `callOptions` (AnalyticsCallOptions): Provides options for the analytics call, like whether it applies globally.
+
+   Example:
+   AnalyticsCallOptions(global: true)
+  
+  AnalyticsCallOptions({
+    required this.global,
+  });
+
+
+8. `coupon` (String): Represents a coupon code or discount applied during a transaction.
+
+   Example: "SUMMER2023"
+
+9. `paymentType` (String): Indicates the type of payment used, like "Credit Card" or "PayPal."
+
+   Example: "Credit Card"
+
+10. `items` (List<AnalyticsEventItem>): Represents a list of items associated with the event, such as products in a cart.
+
+    Example:
+    [
+        AnalyticsEventItem(itemId: "123", itemName: "Product A", price: 9.99),
+        AnalyticsEventItem(itemId: "456", itemName: "Product B", price: 14.99),
+    ]
+
+AnalyticsEventItem({
+    this.affiliation,
+    this.currency,
+    this.coupon,
+    this.creativeName,
+    this.creativeSlot,
+    this.discount,
+    this.index,
+    this.itemBrand,
+    this.itemCategory,
+    this.itemCategory2,
+    this.itemCategory3,
+    this.itemCategory4,
+    this.itemCategory5,
+    this.itemId,
+    this.itemListId,
+    this.itemListName,
+    this.itemName,
+    this.itemVariant,
+    this.locationId,
+    this.price,
+    this.promotionId,
+    this.promotionName,
+    this.quantity,
+  });
+
+11. `shippingTier` (String): Describes the shipping tier or speed selected during checkout.
+
+    Example: "Standard Shipping"
+
+12. `source` (String): Indicates the source of user traffic, such as "Organic" or "Referral."
+
+    Example: "Organic"
+
+13. `medium` (String): Specifies the marketing medium, like "Email" or "Social."
+
+    Example: "Email"
+
+14. `campaign` (String): Represents the marketing campaign associated with the user's interaction.
+
+    Example: "Summer Sale 2023"
+
+15. `term` (String): Refers to the specific term or keyword used in marketing campaigns.
+
+    Example: "Discount Codes"
+
+16. `content` (String): Describes the content variation used in marketing efforts.
+
+    Example: "Banner Ad A"
+
+17. `aclid` (String): Represents the Google Ads click ID for attribution purposes.
+
+    Example: "EAEFVn7J4cBcj6vK9tvoi8"
+
+18. `cp1` (String): Specifies a custom parameter for campaign tracking.
+
+    Example: "123456789"
+
+19. `name` (String): Represents the name of the event being logged.
+
+    Example: "Product Click"
+
+20. `parameters` (Map<String, Object?>): Allows you to attach additional parameters to the event.
+
+    Example:
+    {
+        "category": "Electronics",
+        "subcategory": "Smartphones",
+    }
+
+21. `groupId` (String): Refers to the ID of the group the user is joining.
+
+    Example: "Group123"
+
+22. `levelName` (String): Indicates the name of a game level.
+
+    Example: "Level 5"
+
+23. `success` (int): Specifies the success status of a game level completion, typically 1 for success and 0 for failure.
+
+    Example: 1
+
+24. `level` (int): Represents the player's current level in a game.
+
+    Example: 10
+
+25. `character` (String): Refers to the name or identifier of a game character.
+
+    Example: "Player1"
+
+26. `loginMethod` (String): Specifies the method used for user login, such as "Email" or "Google."
+
+    Example: "Email"
+
+27. `tax` (double): Represents the amount of tax applied to a purchase.
+
+    Example: 2.50
+
+28. `shipping` (double): Indicates the shipping cost for a purchase.
+
+    Example: 5.99
+
+29. `transactionId` (String): Refers to a unique identifier for a transaction or order.
+
+    Example: "ABC123456"
+
+30. `affiliation` (String): Describes the affiliation or store associated with a transaction.
+
+    Example: "Online Store"
+
+31. `screenClass` (String): Represents the class or type of screen being viewed in the app.
+
+    Example: "ProductDetailScreen"
+
+32. `screenName` (String): Specifies the
+
+ name or title of the screen being viewed.
+
+    Example: "Product Details"
+
+33. `searchTerm` (String): Indicates the search term used by the user in the app's search feature.
+
+    Example: "Smartphone"
+
+34. `numberOfNights` (int): Represents the number of nights for a hotel booking.
+
+    Example: 3
+
+35. `numberOfRooms` (int): Indicates the number of hotel rooms booked.
+
+    Example: 2
+
+36. `numberOfPassengers` (int): Specifies the number of passengers for a travel-related event.
+
+    Example: 4
+
+37. `origin` (String): Represents the origin or starting location for a travel-related event.
+
+    Example: "New York"
+
+38. `destination` (String): Specifies the destination or ending location for a travel-related event.
+
+    Example: "Los Angeles"
+
+39. `startDate` (String): Refers to the start date of a travel-related event.
+
+    Example: "2023-09-15"
+
+40. `endDate` (String): Specifies the end date of a travel-related event.
+
+    Example: "2023-09-20"
+
+41. `travelClass` (String): Indicates the class of travel for a flight booking, such as "Economy" or "Business."
+
+    Example: "Economy"
+
+42. `contentType` (String): Specifies the type of content selected or interacted with, like "Video" or "Article."
+
+    Example: "Video"
+
+43. `itemId` (String): Represents the unique identifier of the selected item.
+
+    Example: "Product123"
+
+44. `creativeName` (String): Specifies the name of a creative used in marketing efforts.
+
+    Example: "SummerBanner2023"
+
+45. `creativeSlot` (String): Describes the slot or position where a creative was displayed.
+
+    Example: "HomepageBanner"
+
+46. `locationId` (String): Refers to the location ID associated with a promotion.
+
+    Example: "Location456"
+
+47. `promotionId` (String): Represents the unique identifier of a promotion.
+
+    Example: "Promo789"
+
+48. `promotionName` (String): Specifies the name or title of a promotion.
+
+    Example: "Summer Sale 2023"
+
+49. `checkoutStep` (int): Indicates the step or stage in the checkout process.
+
+    Example: 3
+
+50. `checkoutOption` (String): Specifies the checkout option selected by the user.
+
+    Example: "Credit Card"
+
+51. `method` (String): Indicates the method used for sharing content, like "Email" or "Social Media."
+
+    Example: "Social Media"
+
+52. `signUpMethod` (String): Specifies the method used for user sign-up or registration.
+
+    Example: "Email"
+
+53. `itemName` (String): Represents the name of the virtual item in a game.
+
+    Example: "Sword of Valor"
+
+54. `virtualCurrencyName` (String): Specifies the name of the virtual currency used in a game.
+
+    Example: "Coins"
+
+55. `id` (String): Represents a unique identifier, such as a user ID or achievement ID.
+
+    Example: "User123"
+
+56. `global` (bool): Indicates whether the analytics call applies globally.
+
+    Example: true
+
+57. `timeout` (Duration): Specifies the session timeout duration.
+
+    Example:
+    Duration(minutes: 30)
+
+58. `enabled` (bool): Indicates whether analytics collection is enabled.
+
+    Example: true
+
+59. `adStorageConsentGranted` (bool): Specifies whether consent for ad storage is granted.
+
+    Example: true
+
+60. `analyticsStorageConsentGranted` (bool): Specifies whether consent for analytics storage is granted.
+
+    Example: true
+
+61. `screenClassOverride` (String): Overrides the default screen class for analytics.
+
+    Example: "CustomScreen"
+
+62. `defaultParameters` (Map<String, Object?>): Allows you to set default event parameters.
+
+    Example:
+    {
+        "language": "English",
+        "country": "US",
+    }
+

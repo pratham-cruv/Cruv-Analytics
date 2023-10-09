@@ -1,0 +1,142 @@
+📌Properties common in all three:
+1.Setting the user Properties
+2.Ecommerce- view cart,shipping info, add to cart, refund, purchase, view item, add to wishlist, payment, checkout, remove from cart,etc.
+3.Authentication- login, signup
+
+📌common domain wise:
+
+⭕ECOMMERCE:
+1.FIREBASE:
+      analytics.logAddPaymentInfo()
+      analytics.logAddShippingInfo()
+      analytics.logAddToWishlist()
+      analytics.logAddToCart()
+      analytics.logBeginCheckout()
+      analytics.logEvent(name: name)
+      analytics.logPurchase()
+      analytics.logRefund()
+      analytics.logRemoveFromCart()
+      analytics.logSearch(searchTerm: searchTerm)
+      analytics.logSelectItem()
+      analytics.logSetCheckoutOption(checkoutStep: checkoutStep, checkoutOption: checkoutOption)
+      analytics.logViewCart()
+      analytics.logViewItem()
+      analytics.logViewPromotion()
+      analytics.logViewSearchResults(searchTerm: searchTerm)
+
+
+2.AMPLITUDE:
+	Amplitude.getInstance().logEvent(eventType)
+        Amplitude.getInstance().logRevenue(productIdentifier, quantity, price)
+        Amplitude.getInstance().logRevenueAmount(amount)
+
+
+3.WEB ENGAGE: (ECOMMERCE/HOTEL/TRAVEL)
+	Searched**
+	Product Viewed**
+	Category Viewed**
+	Added to Wishlist**
+	Product Rated or Reviewed**
+	Added to Cart**
+	Offer Availed**
+	Checkout Started**
+	Checkout Completed**
+
+      
+
+⭕AUTH & session:
+1.FIREBASE:
+      analytics.logAppOpen()
+      analytics.logEvent(name: name)
+      analytics.logLogin()
+      analytics.logSignUp(signUpMethod: signUpMethod)
+      analytics.resetAnalyticsData()
+      analytics.setSessionTimeoutDuration(timeout)
+
+2.AMPLITUDE:
+	Amplitude.getInstance().logEvent(eventType)
+	eg.amplitude.getInstance().logEvent("Login", { method: "Email" });
+	Amplitude.getInstance().setMinTimeBetweenSessionsMillis(timeInMillis)
+	Amplitude.getInstance().getSessionId()
+        Amplitude.getInstance().setOptOut(optOut)
+	Amplitude.clearUserProperties();
+        Amplitude.getInstance().trackingSessionEvents(trackingSessionEvents)
+	
+3.WEB ENGAGE:
+	App Start**  
+	Registered or Login**
+	Social Action**
+   	- Action: Share, Like
+
+⭕GAMES:
+1.FIREBASE:
+      analytics.logLevelEnd(levelName: levelName)
+      analytics.logLevelStart(levelName: levelName)
+      analytics.logLevelUp(level: level)
+      analytics.logPostScore(score: score)
+      analytics.logUnlockAchievement(id: id)
+
+2. WEBENGAGE:
+	Level Started**
+	Level Completed**
+	Game Completed**
+	Achievement Unlocked**
+	Bought Item**
+
+
+      
+⭕USER PROPs:     
+1.FIREBASE:
+      analytics.setUserId()
+      analytics.setUserProperty(name: name, value: value)
+      analytics.setConsent()
+
+2.AMPLITUDE:
+	Amplitude.getInstance().clearUserProperties()
+        Amplitude.getInstance().getUserId()
+	Amplitude.getInstance().setUserId(userId)
+        Amplitude.getInstance().setUserProperties(userProperties)
+Amplitude.getInstance().getDeviceId()
+Amplitude.getInstance().regenerateDeviceId()
+Amplitude.getInstance().setDeviceId(deviceId)
+
+3.WEB ENGAGE:
+ 
+webengage.user.setAttribute("attibute_name", "attribute_value");
+
+
+
+
+
+📌NOT USED ABOVE:
+
+1. FIREBASE:
+analytics.logAdImpression()
+analytics.logCampaignDetails(source: source, medium: medium, campaign: campaign)
+analytics.logGenerateLead()
+analytics.logJoinGroup(groupId: groupId)
+analytics.logSetCheckoutOption(checkoutStep: checkoutStep, checkoutOption: checkoutOption)
+analytics.logSpendVirtualCurrency(itemName: itemName, virtualCurrencyName: virtualCurrencyName, value: value)
+analytics.logTutorialBegin()
+analytics.logTutorialComplete()
+analytics.setAnalyticsCollectionEnabled(enabled)
+analytics.setDefaultEventParameters(defaultParameters)
+
+2.AMPLITUDE:
+
+
+Amplitude.getInstance().groupIdentify(String groupType, String groupName, Identify groupIdentify, { bool outOfSession = false, })
+Amplitude.getInstance().identify(Identify identify)
+Amplitude.getInstance().setEventUploadPeriodMillis(value)
+Amplitude.getInstance().setEventUploadThreshold(value)
+Amplitude.getInstance().setGroup(groupType, groupName)
+Amplitude.getInstance().setOffline(enabled)
+Amplitude.getInstance().setServerUrl(serverUrl)
+Amplitude.getInstance().setServerZone(serverZone)
+Amplitude.getInstance().setUseDynamicConfig(useDynamicConfig)
+Amplitude.getInstance().useAppSetIdForDeviceId()
+
+3. WEBENGAGE:
+App Exit
+App Error
+App Crash

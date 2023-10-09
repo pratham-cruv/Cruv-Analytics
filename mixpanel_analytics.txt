@@ -1,0 +1,112 @@
+
+1. `mixpanel.addGroup(groupKey, groupID)`
+   - `groupKey` (String): The key or identifier for a group in Mixpanel.
+   - `groupID` (dynamic): The unique identifier for the group in Mixpanel.
+   - **Description**: Adds a group to the Mixpanel project.
+
+2. `mixpanel.alias(alias, distinctId)`
+   - `alias` (String): The alias or new distinct ID you want to associate with the user.
+   - `distinctId` (String): The original distinct ID of the user you want to alias.
+   - **Description**: Creates an alias for a user, allowing you to link different user identities together.
+
+3. `mixpanel.clearSuperProperties()`
+   - **Description**: Clears all super properties set for the user.
+   - **Note**: This method typically doesn't require additional attributes.
+
+4. `mixpanel.deleteGroup(groupKey, groupID)`
+   - `groupKey` (String): The key or identifier for the group in Mixpanel.
+   - `groupID` (dynamic): The unique identifier for the group in Mixpanel.
+   - **Description**: Deletes a group from the Mixpanel project.
+
+5. `mixpanel.eventElapsedTime(eventName)`
+   - `eventName` (String): The name of the event for which you want to measure elapsed time.
+   - **Description**: Measures the elapsed time since the last occurrence of the specified event.
+
+6. `mixpanel.getDistinctId()`
+   - **Description**: Retrieves the distinct ID associated with the user.
+   - **Note**: This method typically doesn't require additional attributes.
+
+7. `mixpanel.getGroup(groupKey, groupID)`
+   - `groupKey` (String): The key or identifier for the group in Mixpanel.
+   - `groupID` (dynamic): The unique identifier for the group in Mixpanel.
+   - **Description**: Retrieves information about a group.
+
+8. `mixpanel.getPeople()`
+   - **Description**: Retrieves information about people (users) in your Mixpanel project.
+   - **Note**: This method typically doesn't require additional attributes.
+
+9. `mixpanel.getSuperProperties()`
+   - **Description**: Retrieves the super properties set for the user.
+   - **Note**: This method typically doesn't require additional attributes.
+
+10. `mixpanel.hasOptedOutTracking()`
+    - **Description**: Checks if the user has opted out of tracking.
+    - **Note**: This method typically doesn't require additional attributes.
+
+11. `mixpanel.identify(distinctId)`
+    - `distinctId` (String): The distinct ID to identify the user with.
+    - **Description**: Identifies the user with a distinct ID.
+
+12. `mixpanel.optInTracking()`
+    - **Description**: Opts the user back into tracking if they previously opted out.
+    - **Note**: This method typically doesn't require additional attributes.
+
+13. `mixpanel.optOutTracking()`
+    - **Description**: Opts the user out of tracking.
+    - **Note**: This method typically doesn't require additional attributes.
+
+14. `mixpanel.registerSuperProperties(properties)`
+    - `properties` (Map<String, dynamic>): A map of super properties (key-value pairs) to register for the user.
+    - **Description**: Registers super properties for the user.
+
+15. `mixpanel.registerSuperPropertiesOnce(properties)`
+    - `properties` (Map<String, dynamic>): A map of super properties (key-value pairs) to register for the user.
+    - **Description**: Registers super properties for the user if they haven't been set before.
+
+16. `mixpanel.removeGroup(groupKey, groupID)`
+    - `groupKey` (String): The key or identifier for the group in Mixpanel.
+    - `groupID` (dynamic): The unique identifier for the group in Mixpanel.
+    - **Description**: Removes a group from the Mixpanel project.
+
+17. `mixpanel.reset()`
+    - **Description**: Resets the Mixpanel user identity and clears super properties.
+    - **Note**: This method typically doesn't require additional attributes.
+
+18. `mixpanel.setGroup(groupKey, groupID)`
+    - `groupKey` (String): The key or identifier for the group in Mixpanel.
+    - `groupID` (dynamic): The unique identifier for the group in Mixpanel.
+    - **Description**: Sets a group for the user.
+
+19. `mixpanel.setLoggingEnabled(loggingEnabled)`
+    - `loggingEnabled` (bool): A boolean flag indicating whether logging should be enabled or disabled for Mixpanel.
+    - **Description**: Enables or disables logging for Mixpanel.
+
+20. `mixpanel.setServerURL(serverURL)`
+    - `serverURL` (String): The URL of the Mixpanel server endpoint.
+    - **Description**: Sets the server URL for Mixpanel.
+
+21. `mixpanel.setUseIpAddressForGeolocation(useIpAddressForGeolocation)`
+    - `useIpAddressForGeolocation` (bool): A boolean flag indicating whether Mixpanel should use the IP address for geolocation data.
+    - **Description**: Specifies whether to use IP address for geolocation.
+
+22. `mixpanel.timeEvent(eventName)`
+    - `eventName` (String): The name of the event to measure time for.
+    - **Description**: Measures the time taken for a specific event to occur.
+
+23. `mixpanel.toString()`
+    - **Description**: Converts the Mixpanel object to a string representation.
+    - **Note**: This method typically doesn't require additional attributes.
+
+24. `mixpanel.track(eventName)`
+    - `eventName` (String): The name of the event you want to track.
+    - **Description**: Tracks a user event.
+
+25. `mixpanel.trackWithGroups(eventName, properties, groups)`
+    - `eventName` (String): The name of the event you want to track.
+    - `properties` (Map<String, dynamic>): A map of key-value pairs representing additional properties associated with the event.
+    - `groups` (Map<String, dynamic>): A map of key-value pairs representing group properties.
+    - **Description**: Tracks an event with associated group properties.
+
+26. `mixpanel.unregisterSuperProperty(propertyName)`
+    - `propertyName` (String): The name of the super property you want to unregister.
+    - **Description**: Unregisters a super property for the user.
